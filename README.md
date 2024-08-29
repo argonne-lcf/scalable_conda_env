@@ -7,7 +7,7 @@ This is to show how to setup conda environment for large scale runs
    tar -cvf pyenvs.tar.gz pyenvs
 ```
 
-2. Transfer the tarball to all the local storage and  
+2. Transfer the tarball to all the local storage and decompress it
 
 ```bash
 module load frameworks
