@@ -13,7 +13,7 @@ module load frameworks
 
 echo "Transfer built python package ($BUILD): `date`"
 mpiexec --pmi=pmix -np $PBS_JOBSIZE --ppn 1 python cache_soft.py \
-      --src /flare/Aurora_deployment/AuroraGPT/build/2024-08-13/anl_2024_q3_soft.tar.gz
+      --src /flare/Aurora_deployment/AuroraGPT/build/2024-08-13/anl_2024_q3_soft.tar.gz \
       --dst /tmp/anl_2024_q3_soft.tar.gz --d
 
 conda activate /tmp/anl_2024_q3-official_release
