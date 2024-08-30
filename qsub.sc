@@ -10,7 +10,7 @@
 cd ${PBS_O_WORKDIR}
 
 module load frameworks
-
+export PBS_JOBSIZE=$(cat $PBS_NODEFILE | uniq | wc -l)
 echo "Transfer built python package ($BUILD): `date`"
 mpiexec --pmi=pmix -np $PBS_JOBSIZE --ppn 1 python cache_soft.py \
       --src /flare/Aurora_deployment/AuroraGPT/build/2024-08-13/anl_2024_q3_soft.tar.gz \
